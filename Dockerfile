@@ -22,10 +22,11 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | b
 
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+ENV PATH      $PATH:/usr/local/go/bin
 
 RUN wget https://storage.googleapis.com/golang/go1.7.4.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go$GO_VERSION.$GO_OS_ARCH.tar.gz
 
-ENV PATH      $PATH:/usr/local/go/bin
+WORKDIR /var/mac
 
 CMD /bin/bash 
