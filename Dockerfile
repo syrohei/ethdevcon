@@ -25,7 +25,7 @@ ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 RUN wget https://storage.googleapis.com/golang/go1.7.4.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go$GO_VERSION.$GO_OS_ARCH.tar.gz
-RUN export PATH=$PATH:/usr/local/go/bin
 
+ENV PATH      $PATH:/usr/local/go/bin
 
-CMD ["node"] 
+CMD /bin/bash 
