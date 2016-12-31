@@ -1,0 +1,11 @@
+dev:
+  restart: always
+  build: ./
+  stdin_open: true
+  tty: true
+  ports:
+    - "22:22"
+  environment:
+    - DATABASE_HOST=db
+  volumes:
+    - /:/var/mac
