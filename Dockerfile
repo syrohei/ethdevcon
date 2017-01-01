@@ -27,6 +27,9 @@ ENV PATH      $PATH:/usr/local/go/bin
 RUN wget https://storage.googleapis.com/golang/go1.7.4.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go$GO_VERSION.$GO_OS_ARCH.tar.gz
 
+RUN npm install -g truffle 
+RUN npm install -g ethereumjs-testrpc
+
 WORKDIR /var/mac
 
 CMD /bin/bash 
