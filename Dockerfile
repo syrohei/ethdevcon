@@ -6,7 +6,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # make sure apt is up to date
 RUN apt-get update --fix-missing
-RUN apt-get install -y curl wget build-essential python-pip libssl-dev git ssh
+RUN apt-get install -y curl wget build-essential python-pip vim libssl-dev git ssh
 
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 6.9.2
@@ -29,6 +29,13 @@ RUN tar -C /usr/local -xzf go$GO_VERSION.$GO_OS_ARCH.tar.gz
 
 RUN npm install -g truffle 
 RUN npm install -g ethereumjs-testrpc
+
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository -y ppa:ethereum/ethereum
+RUN apt-get update
+
+RUN apt-get install -y ethereum
+ 
 
 WORKDIR /var/mac
 
