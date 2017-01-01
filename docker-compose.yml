@@ -9,4 +9,4 @@ dev:
   environment:
     - DATABASE_HOST=db
   volumes:
-    - /:/var/mac
+    - ~/:/var/mac
