@@ -6,7 +6,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # make sure apt is up to date
 RUN apt-get update --fix-missing
-RUN apt-get install -y curl wget build-essential libssl-dev git ssh
+RUN apt-get install -y curl wget build-essential python-pip libssl-dev git ssh
 
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 6.9.2
