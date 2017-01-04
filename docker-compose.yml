@@ -6,6 +6,8 @@ dev:
   tty: true
   ports:
     - "22:22"
+    - "8080:8080"
+    - "8545:8545"
   environment:
     - DATABASE_HOST=db
   volumes:
