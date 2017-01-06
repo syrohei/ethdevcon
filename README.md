@@ -1,4 +1,4 @@
-# dotdocker
+# Ether Development DockerContrainer Package
 
 ## getting started
 
