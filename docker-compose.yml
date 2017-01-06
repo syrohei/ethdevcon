@@ -1,6 +1,6 @@
 dev:
   restart: always
-  container_name: dev
+  container_name: ethdevcon
   build: ./
   stdin_open: true
   tty: true

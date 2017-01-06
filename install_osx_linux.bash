@@ -2,4 +2,4 @@
 
 docker-compose up -d
 
-echo docker exec -it dev /bin/bash >> ~/.bash_profile
+echo docker exec -it ethdevcon /bin/bash >> ~/.bash_profile
